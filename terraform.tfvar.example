@@ -1,3 +1,4 @@
 license = "ABCDE-WXYZO-KLMNO"
 baseurl = "https://stackstate.example.com"
 sizing  = "10-nonha"
+extra_values_file = "/root/terraform/observability-tf/test/terraform-suse-observability/mail.yaml" # Please add full path /
