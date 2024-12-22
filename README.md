@@ -28,12 +28,6 @@ terraform init
 terraform plan
 terraform apply
 ```
-The login details will be displayed in the screen once the deployment is successful. It will have the details as below.
-
-```bash
-SUSE_observability_URL= "https://stackstate.example.com"
-SUSE_observability_Password = "initial-admin-password"
-```
 
 - Destroy the resources when cluster is no more needed.
 ```bash
