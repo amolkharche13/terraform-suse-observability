@@ -4,6 +4,15 @@ resource "null_resource" "execute_cmd" {
   }
 }
 
+data "local_file" "base_config" {
+  filename   = "${path.root}/suse-observability-values/templates/baseConfig_values.yaml"
+  depends_on = [null_resource.execute_cmd]
+}
+
+data "local_file" "sizing_config" {
+  filename   = "${path.root}/suse-observability-values/templates/sizing_values.yaml"
+  depends_on = [null_resource.execute_cmd]
+}
 
 resource "kubernetes_namespace" "suse_observability" {
   metadata {
@@ -14,9 +23,9 @@ resource "helm_release" "suse_observability" {
   name      = "suse-observability"
   chart     = "suse-observability/suse-observability"
   namespace = kubernetes_namespace.suse_observability.metadata[0].name
- values = [
-    file("./suse-observability-values/templates/baseConfig_values.yaml"),
-    file("./suse-observability-values/templates/sizing_values.yaml")
+  values = [
+    data.local_file.base_config.content,
+    data.local_file.sizing_config.content
   ]
+  depends_on = [null_resource.execute_cmd]
 }
-
