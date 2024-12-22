@@ -1,1 +1,3 @@
-
+license = "ABCDE-WXYZO-KLMNO"
+baseurl = "https://stackstate.example.com"
+sizing  = "10-nonha"
