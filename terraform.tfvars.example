@@ -1,4 +1,4 @@
 license = "ABCDE-WXYZO-KLMNO"
 baseurl = "https://stackstate.example.com"
 sizing  = "10-nonha"
-#extra_values_file = "/abc/xyz/email.yaml" # Please add full path /
+#extra_values_file = "/abc/xyz/email.yaml" # Please add full path 
