@@ -8,9 +8,7 @@ Please ensure that you read the instructions thoroughly to understand the necess
 
 1. Ensure that `helm` is installed on your local machine. If it is not installed, you can install it using the following commands:
     ```bash
-     curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-     chmod 700 get_helm.sh
-     ./get_helm.sh
+    curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
     ```
 
 2. Ensure that you have `kubectl` access to your Kubernetes cluster. If your `kubeconfig` is not set, run the following command to configure it:
