@@ -45,7 +45,7 @@ terraform plan
 terraform apply
 ```
 
-- Destroy the resources when cluster is no more needed.
+- Destroy the SUSE Observability cluster when is no more needed.
 ```bash
 terraform destroy
 ```
