@@ -14,15 +14,11 @@ data "local_file" "sizing_config" {
   depends_on = [null_resource.execute_cmd]
 }
 
-resource "kubernetes_namespace" "suse_observability" {
-  metadata {
-    name = "suse-observability"
-  }
-}
 resource "helm_release" "suse_observability" {
   name      = "suse-observability"
   chart     = "suse-observability/suse-observability"
-  namespace = kubernetes_namespace.suse_observability.metadata[0].name
+  namespace = "suse-observability"
+  create_namespace = true
   values = concat(
 [
     data.local_file.base_config.content,
