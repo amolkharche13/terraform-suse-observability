@@ -34,7 +34,7 @@ cd terraform-suse-observability
 - **`extra_values_file (OPTIONAL)`**: If you wish to provide any additional configuration files (e.g., for LDAP, email, authentication, OIDC, or other settings), you can do so by specifying the absolute path to the desired `values.yaml` file, such as `/abc/xyz/email.yaml`.
 
 
-### NOTE
+### Note
 you may need to use ` terraform init -upgrade` to upgrade provider versions
 
 Execute the below commands to start deployment.
