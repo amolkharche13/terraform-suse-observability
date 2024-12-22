@@ -14,4 +14,9 @@ variable "sizing" {
   type        = string
   default     = "10-nonha"
 }
+variable "extra_values_file" {
+  description = "Optional extra values file to pass to the Helm release"
+  type        = string
+  default     = null
+}
 
