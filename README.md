@@ -31,8 +31,8 @@ terraform apply
 The login details will be displayed in the screen once the deployment is successful. It will have the details as below.
 
 ```bash
-rancher_hostname = "https://rancher.<xx.xx.xx.xx>.sslip.io"
-rancher_password = "initial-admin-password"
+SUSE_observability_URL= "https://stackstate.example.com"
+SUSE_observability_Password = "initial-admin-password"
 ```
 
 - Destroy the resources when cluster is no more needed.
