@@ -49,6 +49,19 @@ Print SUSE Observability URL and password by using following command
   ```bash
   cat ./suse-observability-values/templates/baseConfig_values.yaml | grep -E 'baseUrl|admin pa' | sed -nE 's/.*http/suse-observability URL: http/p; s/.*password is: /admin password: /p'
   ```
+### Agent Installation
+To install the SUSE Observability agent, go to the **SUSE Observability UI** --> **"Stackpacks"** section. Choose the Kubernetes distribution you're using. The command will be similar to the one shown below.
+```bash
+#NOTE: This is just a sample commands only.
+helm upgrade --install \
+--namespace suse-observability \
+--create-namespace \
+--set-string 'stackstate.apiKey'='lgksjljlgdjlkkjdssUCYtZORO' \
+--set-string 'stackstate.cluster.name'='digital-ocean' \
+--set-string 'stackstate.url'='https://stackstate.example.com:8080/receiver/stsAgent' \
+suse-observability-agent suse-observability/suse-observability-agent
+```
+
 #### Destroy the SUSE Observability cluster when is no more needed.
 ```bash
 terraform destroy
