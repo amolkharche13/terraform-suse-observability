@@ -4,6 +4,8 @@ With the resources and configurations included, you can efficiently set up your 
 
 Please ensure that you read the instructions thoroughly to understand the necessary prerequisites, configuration options, and deployment steps. 
 
+⚠️ This repository is not designed for installing the SUSE Observability Cluster in air-gapped environments.
+
 ### Prerequisites
 
 1. Ensure that `helm` is installed on your local machine. If it is not installed, you can install it using the following commands:
