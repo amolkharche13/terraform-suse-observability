@@ -52,7 +52,13 @@ Print SUSE Observability URL and password by using following command
 ### Agent Installation
 To install the SUSE Observability agent, go to the **SUSE Observability UI** --> **"Stackpacks"** section. Choose the Kubernetes distribution you're using. The command will be similar to the one shown below.
 ```bash
-#NOTE: This is just a sample commands only.
+#NOTE: Theses are just a sample commands only.
+
+#Add the SUSE Observability helm repository:
+
+helm repo add suse-observability https://charts.rancher.com/server-charts/prime/suse-observability
+helm repo update
+
 helm upgrade --install \
 --namespace suse-observability \
 --create-namespace \
