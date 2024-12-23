@@ -15,16 +15,16 @@ data "local_file" "sizing_config" {
 }
 
 resource "helm_release" "suse_observability" {
-  name      = "suse-observability"
-  namespace = "suse-observability"
+  name             = "suse-observability"
+  namespace        = "suse-observability"
   create_namespace = true
-  chart     = "suse-observability/suse-observability"
+  chart            = "suse-observability/suse-observability"
   values = concat(
-[
-    data.local_file.base_config.content,
-    data.local_file.sizing_config.content
-  ],
+    [
+      data.local_file.base_config.content,
+      data.local_file.sizing_config.content
+    ],
     var.extra_values_file != null ? [file(var.extra_values_file)] : []
-)
+  )
   depends_on = [null_resource.execute_cmd]
 }
