@@ -47,7 +47,7 @@ terraform apply
 ```
 Print SUSE Observability URL and password by using following command
   ```bash
-  cat ./suse-observability-values/templates/baseConfig_values.yaml | grep -E 'baseUrl|admin pa' | sed -nE 's/.*http/suse-observability external URL: http/p; s/.*password is: /admin password: /p'
+  cat ./suse-observability-values/templates/baseConfig_values.yaml | grep -E 'baseUrl|admin pa' | sed -nE 's/.*http/suse-observability URL: http/p; s/.*password is: /admin password: /p'
   ```
 #### Destroy the SUSE Observability cluster when is no more needed.
 ```bash
