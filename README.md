@@ -2,7 +2,7 @@
 If you're looking to quickly deploy a SUSE Observability cluster, this repository provides a streamlined solution using Terraform. 
 With the resources and configurations included, you can efficiently set up your SUSE Observability instance with minimal effort, whether it's for a small trial or a full-scale production environment.
 
-Please ensure that you read the instructions thoroughly to understand the necessary prerequisites, configuration options, and deployment steps. 
+**Please** **ensure that you read the instructions thoroughly to understand the necessary prerequisites, configuration options, and deployment steps.** 
 
 ⚠️ This repository is not designed for installing the SUSE Observability Cluster in air-gapped environments.
 
