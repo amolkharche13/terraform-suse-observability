@@ -15,6 +15,7 @@ Please ensure that you read the instructions thoroughly to understand the necess
     ```bash
      export KUBECONFIG=~/.kube/config
     ```
+    If your kubeconfig is located at a different path, make sure to update the `config_path` in the `providers.tf` file under the `helm` section accordingly.
 
 ### Usage
 
