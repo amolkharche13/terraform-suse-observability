@@ -12,8 +12,12 @@ With the resources and configurations included, you can efficiently set up your 
     ```bash
     curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
     ```
-
-2. Ensure that you have `kubectl` access to your Kubernetes cluster. If your `kubeconfig` is not set, run the following command to configure it:
+2. Add Observability Helm repository
+   ```bash
+   helm repo add suse-observability https://charts.rancher.com/server-charts/prime/suse-observability
+   helm repo update
+   ```
+3. Ensure that you have `kubectl` access to your Kubernetes cluster. If your `kubeconfig` is not set, run the following command to configure it:
     ```bash
      export KUBECONFIG=~/.kube/config
     ```
