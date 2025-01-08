@@ -1,5 +1,5 @@
 resource "google_container_cluster" "gke_cluster" {
-  name     = "observability-gke-cluster"
+  name     = var.cluster_name
   location = var.region
   initial_node_count = 2
 
